@@ -14,6 +14,9 @@ $('.chest-small, .chest-big').hover(function () {
 });
 
 $('.chest-small, .chest-big').on('click', function () {
+    if(shaking) {
+        return false;
+    }
     var $this = $(this);
     shaking = true;
     $this.addClass('shake shake-constant').find('.bubble-box').hide();
